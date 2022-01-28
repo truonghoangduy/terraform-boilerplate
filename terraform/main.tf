@@ -11,7 +11,6 @@ provider "aws" {
   region = "ap-southeast-1"
 }
 
-
 module "iam" {
   source = "./modules/iam"
 }
@@ -22,10 +21,17 @@ module "database" {
 
 module "lambda" {
   source       = "./modules/lambda"
-  aws_iam_role = module.iam.iam_for_lambda.arn
-
+  aws_iam_role = module.iam.iam_for_lambda
   depends_on = [
-    module.iam
+    module.iam,
+  ]
+}
+
+module "api-gateway" {
+  source                = "./modules/gateway"
+  course_get_lambda_arn = module.lambda.course_get_lambda_arn
+  depends_on = [
+    module.lambda,
   ]
 }
 
