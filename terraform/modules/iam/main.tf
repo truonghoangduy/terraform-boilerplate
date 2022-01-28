@@ -16,7 +16,6 @@ resource "aws_iam_role_policy_attachment" "iam_for_lambda-role-policy-attachment
   for_each = toset([
     "arn:aws:iam::aws:policy/AWSLambdaInvocation-DynamoDB",
     "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess",
-    ""
   ])
 
   role       = aws_iam_role.iam_for_lambda.name
