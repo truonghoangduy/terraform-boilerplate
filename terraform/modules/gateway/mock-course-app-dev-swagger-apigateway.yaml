@@ -1,0 +1,878 @@
+---
+swagger: "2.0"
+info:
+  version: "2021-10-25T05:38:51Z"
+  title: "course-app"
+host: "faa9b0w1lb.execute-api.us-east-2.amazonaws.com"
+basePath: "/dev"
+schemes:
+  - "https"
+paths:
+  /course:
+    get:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseTemplates:
+              application/json:
+                "{\n  \"title\": \"Course Code Factory\",\n  \"courses\"\
+                : [\n    {\n      \"tags\": [\n        \"NodeJs\",\n        \"Reactjs\"\
+                ,\n        \"MongoDB\"\n      ],\n      \"courseId\": 0,\n      \"\
+                thumbnailURL\": \"https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?size=626&ext=jpg\"\
+                ,\n      \"title\": \"MERN eCommerce From Scratch\",\n      \"description\"\
+                : \"Welcome to MERN Stack Front To Back. In this course we will build\
+                \ an in depth full stack social network application using Node.js,\
+                \ Express, React, Redux and MongoDB along with ES6+. We will start\
+                \ with a blank text editor and end with a deployed full stack application.\"\
+                ,\n      \"price\": 50.0,\n      \"subtitle\": \"Build and deploy\
+                \ a social network with Node.js, Express, React, Redux & MongoDB\"\
+                ,\n      \"duration\": 20\n    },\n    {\n      \"tags\": [\n    \
+                \    \"JavaScript\",\n        \"Bootstrap\"\n      ],\n      \"courseId\"\
+                : 1,\n      \"thumbnailURL\": \"https://nordiccoder.com/app/uploads/2019/12/50-javascript.jpg\"\
+                ,\n      \"title\": \"How build a website\",\n      \"description\"\
+                : \"Javascript Welcome to MERN Stack Front To Back. In this course\
+                \ we will build an in depth full stack social network application\
+                \ using Node.js, Express, React, Redux and MongoDB along with ES6+.\
+                \ We will start with a blank text editor and end with a deployed full\
+                \ stack application.\",\n      \"price\": 10.20,\n      \"subtitle\"\
+                : \"Build and deploy a social network with Javascript and Bootstrap\"\
+                ,\n      \"duration\": 20\n    },\n    {\n      \"tags\": [\n    \
+                \    \"Python\",\n        \"AI\"\n      ],\n      \"courseId\": 2,\n\
+                \      \"thumbnailURL\": \"https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?size=626&ext=jpg\"\
+                ,\n      \"title\": \"Machine Learning Introduction with Python\"\
+                ,\n      \"description\": \"AI and machine learning are in demand\
+                \ and Python is the #1 programming language for data scientists. That\
+                \ means learning Python can set you up for a lucrative career.\\nIn\
+                \ this path, you’ll work your way through the basics of Python, master\
+                \ various components of machine learning, like calculus, linear algebra,\
+                \ linear regression, and much more.\\nStart developing skills in statistics\
+                \ and probability to form valuable insights all from the comfort of\
+                \ your browser.\",\n      \"price\": 30.11,\n      \"subtitle\": \"\
+                AI and machine learning are in demand and Python is the #1 programming\
+                \ language for data scientists. That means learning Python can set\
+                \ you up for a lucrative career\",\n      \"duration\": 20\n    },\n\
+                \    {\n      \"tags\": [\n        \"Test\",\n        \"QA\"\n   \
+                \   ],\n      \"courseId\": 3,\n      \"thumbnailURL\": \"https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?size=626&ext=jpg\"\
+                ,\n      \"title\": \"Machine Learning Introduction with Python\"\
+                ,\n      \"description\": \"AI and machine learning are in demand\
+                \ and Python is the #1 programming language for data scientists. That\
+                \ means learning Python can set you up for a lucrative career.\\nIn\
+                \ this path, you’ll work your way through the basics of Python, master\
+                \ various components of machine learning, like calculus, linear algebra,\
+                \ linear regression, and much more.\\nStart developing skills in statistics\
+                \ and probability to form valuable insights all from the comfort of\
+                \ your browser.\",\n      \"price\": 99.99,\n      \"subtitle\": \"\
+                AI and machine learning are in demand and Python is the #1 programming\
+                \ language for data scientists. That means learning Python can set\
+                \ you up for a lucrative career\",\n      \"duration\": 10\n    },\n\
+                \    {\n      \"tags\": [\n        \"Test\",\n        \"QA\"\n   \
+                \   ],\n      \"courseId\": 4,\n      \"thumbnailURL\": \"https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?size=626&ext=jpg\"\
+                ,\n      \"title\": \"Machine Learning Introduction with Python\"\
+                ,\n      \"description\": \"AI and machine learning are in demand\
+                \ and Python is the #1 programming language for data scientists. That\
+                \ means learning Python can set you up for a lucrative career.\\nIn\
+                \ this path, you’ll work your way through the basics of Python, master\
+                \ various components of machine learning, like calculus, linear algebra,\
+                \ linear regression, and much more.\\nStart developing skills in statistics\
+                \ and probability to form valuable insights all from the comfort of\
+                \ your browser.\",\n      \"price\": 44.12,\n      \"subtitle\": \"\
+                AI and machine learning are in demand and Python is the #1 programming\
+                \ language for data scientists. That means learning Python can set\
+                \ you up for a lucrative career\",\n      \"duration\": 10\n    },\n\
+                \    {\n      \"tags\": [\n        \"Test\",\n        \"QA\"\n   \
+                \   ],\n      \"courseId\": 5,\n      \"thumbnailURL\": \"https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?size=626&ext=jpg\"\
+                ,\n      \"title\": \"Machine Learning Introduction with Python\"\
+                ,\n      \"description\": \"AI and machine learning are in demand\
+                \ and Python is the #1 programming language for data scientists. That\
+                \ means learning Python can set you up for a lucrative career.\\nIn\
+                \ this path, you’ll work your way through the basics of Python, master\
+                \ various components of machine learning, like calculus, linear algebra,\
+                \ linear regression, and much more.\\nStart developing skills in statistics\
+                \ and probability to form valuable insights all from the comfort of\
+                \ your browser.\",\n      \"price\": 30.11,\n      \"subtitle\": \"\
+                AI and machine learning are in demand and Python is the #1 programming\
+                \ language for data scientists. That means learning Python can set\
+                \ you up for a lucrative career\",\n      \"duration\": 10\n    },\n\
+                \    {\n      \"tags\": [\n        \"Test\",\n        \"QA\"\n   \
+                \   ],\n      \"courseId\": 6,\n      \"thumbnailURL\": \"https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?size=626&ext=jpg\"\
+                ,\n      \"title\": \"Machine Learning Introduction with Python\"\
+                ,\n      \"description\": \"AI and machine learning are in demand\
+                \ and Python is the #1 programming language for data scientists. That\
+                \ means learning Python can set you up for a lucrative career.\\nIn\
+                \ this path, you’ll work your way through the basics of Python, master\
+                \ various components of machine learning, like calculus, linear algebra,\
+                \ linear regression, and much more.\\nStart developing skills in statistics\
+                \ and probability to form valuable insights all from the comfort of\
+                \ your browser.\",\n      \"price\": 10.99,\n      \"subtitle\": \"\
+                AI and machine learning are in demand and Python is the #1 programming\
+                \ language for data scientists. That means learning Python can set\
+                \ you up for a lucrative career\",\n      \"duration\": 10\n    },\n\
+                \    {\n      \"tags\": [\n        \"Test\",\n        \"QA\"\n   \
+                \   ],\n      \"courseId\": 7,\n      \"thumbnailURL\": \"https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?size=626&ext=jpg\"\
+                ,\n      \"title\": \"Machine Learning Introduction with Python\"\
+                ,\n      \"description\": \"AI and machine learning are in demand\
+                \ and Python is the #1 programming language for data scientists. That\
+                \ means learning Python can set you up for a lucrative career.\\nIn\
+                \ this path, you’ll work your way through the basics of Python, master\
+                \ various components of machine learning, like calculus, linear algebra,\
+                \ linear regression, and much more.\\nStart developing skills in statistics\
+                \ and probability to form valuable insights all from the comfort of\
+                \ your browser.\",\n      \"price\": 25.6,\n      \"subtitle\": \"\
+                AI and machine learning are in demand and Python is the #1 programming\
+                \ language for data scientists. That means learning Python can set\
+                \ you up for a lucrative career\",\n      \"duration\": 10\n    },\n\
+                \    {\n      \"tags\": [\n        \"Test\",\n        \"QA\"\n   \
+                \   ],\n      \"courseId\": 8,\n      \"thumbnailURL\": \"https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?size=626&ext=jpg\"\
+                ,\n      \"title\": \"Machine Learning Introduction with Python\"\
+                ,\n      \"description\": \"AI and machine learning are in demand\
+                \ and Python is the #1 programming language for data scientists. That\
+                \ means learning Python can set you up for a lucrative career.\\nIn\
+                \ this path, you’ll work your way through the basics of Python, master\
+                \ various components of machine learning, like calculus, linear algebra,\
+                \ linear regression, and much more.\\nStart developing skills in statistics\
+                \ and probability to form valuable insights all from the comfort of\
+                \ your browser.\",\n      \"price\": 99.99,\n      \"subtitle\": \"\
+                AI and machine learning are in demand and Python is the #1 programming\
+                \ language for data scientists. That means learning Python can set\
+                \ you up for a lucrative career\",\n      \"duration\": 10\n    },\n\
+                \    {\n      \"tags\": [\n        \"MongoDB\",\n        \"QA\"\n\
+                \      ],\n      \"courseId\": 9,\n      \"thumbnailURL\": \"https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?size=626&ext=jpg\"\
+                ,\n      \"title\": \"Machine Learning Introduction with Python\"\
+                ,\n      \"description\": \"AI and machine learning are in demand\
+                \ and Python is the #1 programming language for data scientists. That\
+                \ means learning Python can set you up for a lucrative career.\\nIn\
+                \ this path, you’ll work your way through the basics of Python, master\
+                \ various components of machine learning, like calculus, linear algebra,\
+                \ linear regression, and much more.\\nStart developing skills in statistics\
+                \ and probability to form valuable insights all from the comfort of\
+                \ your browser.\",\n      \"price\": 32.77,\n      \"subtitle\": \"\
+                AI and machine learning are in demand and Python is the #1 programming\
+                \ language for data scientists. That means learning Python can set\
+                \ you up for a lucrative career\",\n      \"duration\": 10\n    },\n\
+                \    {\n      \"tags\": [\n        \"NodeJS\",\n        \"QA\"\n \
+                \     ],\n      \"courseId\": 10,\n      \"thumbnailURL\": \"https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?size=626&ext=jpg\"\
+                ,\n      \"title\": \"Machine Learning Introduction with Python\"\
+                ,\n      \"description\": \"AI and machine learning are in demand\
+                \ and Python is the #1 programming language for data scientists. That\
+                \ means learning Python can set you up for a lucrative career.\\nIn\
+                \ this path, you’ll work your way through the basics of Python, master\
+                \ various components of machine learning, like calculus, linear algebra,\
+                \ linear regression, and much more.\\nStart developing skills in statistics\
+                \ and probability to form valuable insights all from the comfort of\
+                \ your browser.\",\n      \"price\": 15.33,\n      \"subtitle\": \"\
+                AI and machine learning are in demand and Python is the #1 programming\
+                \ language for data scientists. That means learning Python can set\
+                \ you up for a lucrative career\",\n      \"duration\": 10\n    },\n\
+                \    {\n      \"tags\": [\n        \"Test\",\n        \"QA\"\n   \
+                \   ],\n      \"courseId\": 11,\n      \"thumbnailURL\": \"https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?size=626&ext=jpg\"\
+                ,\n      \"title\": \"Machine Learning Introduction with Python\"\
+                ,\n      \"description\": \"AI and machine learning are in demand\
+                \ and Python is the #1 programming language for data scientists. That\
+                \ means learning Python can set you up for a lucrative career.\\nIn\
+                \ this path, you’ll work your way through the basics of Python, master\
+                \ various components of machine learning, like calculus, linear algebra,\
+                \ linear regression, and much more.\\nStart developing skills in statistics\
+                \ and probability to form valuable insights all from the comfort of\
+                \ your browser.\",\n      \"price\": 12.29,\n      \"subtitle\": \"\
+                AI and machine learning are in demand and Python is the #1 programming\
+                \ language for data scientists. That means learning Python can set\
+                \ you up for a lucrative career\",\n      \"duration\": 10\n    }\n\
+                \  ]\n}"
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    options:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "courseName"
+          in: "query"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-request-validator:
+        "Validate query string parameters and\
+        \ headers"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseTemplates:
+              application/json:
+                "{\r\n    \"title\": \"Search Course\",\r\n    \"\
+                courses\": [\r\n        {\r\n            \"tags\": [\r\n         \
+                \       \"Nodejs\",\r\n                \"Reactjs\",\r\n          \
+                \      \"MongoDB\"\r\n            ],\r\n            \"courseId\":\
+                \ 0,\r\n            \"thumbnailURL\": \"https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?size=626&ext=jpg\"\
+                ,\r\n            \"title\": \"MERN eCommerce From Scratch\",\r\n \
+                \           \"description\": \"Welcome to MERN Stack Front To Back.\
+                \ In this course we will build an in depth full stack social network\
+                \ application using Node.js, Express, React, Redux and MongoDB along\
+                \ with ES6+. We will start with a blank text editor and end with a\
+                \ deployed full stack application.\",\r\n            \"price\": 50.0,\r\
+                \n            \"subtitle\": \"Build and deploy a social network with\
+                \ Node.js, Express, React, Redux & MongoDB\",\r\n            \"duration\"\
+                : 20\r\n        },\r\n        {\r\n            \"tags\": [\r\n   \
+                \             \"html\",\r\n                \"css\",\r\n          \
+                \      \"figma\"\r\n            ],\r\n            \"courseId\": 1,\r\
+                \n            \"title\": \"UI UX Design\",\r\n            \"description\"\
+                : \"Figma is a very powerful application that runs online. There are\
+                \ virtually no platform boundaries when it comes to using figma because\
+                \ you can design within a web browser or using their desktop application\
+                \ made for windows and macs. Figma is similar to Sketch and Adobe\
+                \ XD but is the more powerful of the three when it comes to team collaboration\
+                \ and responsive, fast paced design\",\r\n            \"price\": 50.0,\r\
+                \n            \"thumbnailURL\": \"https://blog.itnavi.com.vn/wp-content/uploads/2021/04/Figma-l%C3%A0-g%C3%AC-1.jpg\"\
+                ,\r\n            \"subtitle\": \"Use html css to get a job in UI Design\"\
+                ,\r\n            \"duration\": 20\r\n        },\r\n        {\r\n \
+                \           \"tags\": [\r\n                \"IELTS\",\r\n        \
+                \        \"English\"\r\n            ],\r\n            \"courseId\"\
+                : 2,\r\n            \"thumbnailURL\": \"https://netviethuman.com/wp-content/uploads/2021/07/ielts-la-gi-5-e1625750533301.jpg\"\
+                ,\r\n            \"title\": \"IELTS Band 7+ Complete Prep Course\"\
+                ,\r\n            \"description\": \"Do you need a Band 7+?  Have you\
+                \ tried repeatedly and not made progress?  Do you need an actual guide\
+                \ to Band 7 success?Then our course is just for you as it prepares\
+                \ participants for all parts of the IELTS exam: Listening, Reading,\
+                \ Writing and Speaking modules. It focuses on teaching the skills\
+                \ and techniques required to sit for the test.  This course has been\
+                \ awarded over 6,000 5-Star Reviews!!!! and the teacher has won UDEMY\
+                \ teacher awards as a top performer.\",\r\n            \"price\":\
+                \ 50.0,\r\n            \"subtitle\": \"Major Keys to Success.\",\r\
+                \n            \"duration\": 20\r\n        },\r\n        {\r\n    \
+                \        \"tags\": [\r\n                \"Cooking\"\r\n          \
+                \  ],\r\n            \"courseId\": 3,\r\n            \"title\": \"\
+                How to Make Tamales\",\r\n            \"thumbnailURL\": \"https://cdn.shopify.com/s/files/1/1862/6381/products/tamales_1024x1024.jpg?v=1604530950\"\
+                ,\r\n            \"description\": \"In this course my mom and I will\
+                \ teach you how to make tamales.  If you have never made tamales before\
+                \ - you probably feel a little intimidated by the long list of ingredients\
+                \ and the overall process. But don't be, because all the ingredients\
+                \ you will need can be found at your local grocery store. We have\
+                \ broken down this course into 9 easy steps, and we will show you\
+                \ what you will need for every section. This recipe will make 5 dozen\
+                \ tamales or 60 to 64 tamales.\",\r\n            \"price\": 50.0,\r\
+                \n            \"subtitle\": \"In 9 Easy Steps\",\r\n            \"\
+                duration\": 20\r\n        },\r\n        {\r\n            \"tags\"\
+                : [\r\n                \"Fitness\"\r\n            ],\r\n         \
+                \   \"courseId\": 4,\r\n            \"title\": \"Fitness Trainer Certification:\
+                \ Gym Workouts & Bodybuilding\",\r\n            \"thumbnailURL\":\
+                \ \"https://dungcutheduc.vn/images/contents/fitness.jpg\",\r\n   \
+                \         \"description\": \"Learn How To Become A Gym Workout Trainer\
+                \ / Fitness Coach And Grow Your Fitness Coaching Business.Hi, I'm\
+                \ Felix Harder fitness coach and certified nutritionist. My \\\"Fitness\
+                \ Trainer Certification\\\" is designed for anyone who wants to coach\
+                \ others about gym workouts - be it for bodybuilding, strength training\
+                \ or muscle growth.In this course I will take you through the process\
+                \ of becoming a fitness expert step by step. You will learn everything\
+                \ you need to know about the fundamentals of good training programs\
+                \ and how to design your very own for you or your clients\",\r\n \
+                \           \"price\": 50.0,\r\n            \"subtitle\": \"Become\
+                \ A Fitness Coach: Create Muscle Growth & Strength Workouts, Build\
+                \ A Fitness Training Business & Be A Health Expert\",\r\n        \
+                \    \"duration\": 20\r\n        }\r\n    ]\r\n}"
+        requestTemplates:
+          application/json: "{\n    \"statusCode\": 200\n}\n"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+  /course/detail:
+    get:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "courseId"
+          in: "query"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-request-validator:
+        "Validate query string parameters and\
+        \ headers"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseTemplates:
+              application/json:
+                "{\n  \"tags\": [\n    \"Nodejs\",\n    \"Reactjs\"\
+                ,\n    \"MongoDB\"\n  ],\n  \"courseId\": 0,\n  \"thumbnailURL\":\
+                \ \"https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?size=626&ext=jpg\"\
+                ,\n  \"title\": \"MERN\",\n  \"description\": \"Welcome to MERN Stack\
+                \ Front To Back. In this course we will build an in depth full stack\
+                \ social network application using Node.js, Express, React, Redux\
+                \ and MongoDB along with ES6+. \",\n  \"price\": 50.0,\n  \"subtitle\"\
+                : \"Build and deploy a social network with Node.js, Express, React,\
+                \ Redux & MongoDB\",\n  \"duration\": 20\n}"
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+  /course/list-title:
+    get:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseTemplates:
+              application/json:
+                "{\n\"title-list\":[{\n\n \"title\": \"MERN eCommerce\
+                \ From Scratch\"\n},\n{\n\n \"title\": \"UI UX Design\"\n},{\n\n \"\
+                title\": \"IELTS Band 7+ Complete Prep Course\"\n},{\n\n \"title\"\
+                : \"How to Make Tamales\"\n},{\n\n \"title\": \"Fitness Trainer Certification:\
+                \ Gym Workouts & Bodybuilding\"\n},{\n\n \"title\": \"Become a Calculus\
+                \ 1 Master\"\n},{\n\n \"title\": \"Photography Masterclass: A Complete\
+                \ Guide to Photography\"\n},{\n\n \"title\": \"The Complete AP and\
+                \ College Physics Course\"\n},{\n\n \"title\": \"Build a Backend REST\
+                \ API with Python & Django - Advanced\"\n},{\n\n  \"title\": \"The\
+                \ Complete JavaScript Course 2021: From Zero to Expert!\"\n}\n]\n}"
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+  /user-course:
+    get:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "username"
+          in: "query"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-request-validator:
+        "Validate query string parameters and\
+        \ headers"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseTemplates:
+              application/json:
+                "{\n  \"title\": \"Course Use\",\n  \"username\":\
+                \ \"Julia Fallen\",\n  \"courses\": [\n    {\n      \"tags\": [\n\
+                \        \"Nodejs\",\n        \"Reactjs\",\n        \"MongoDB\"\n\
+                \      ],\n      \"courseId\": 0,\n      \"thumbnailURL\": \"https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?size=626&ext=jpg\"\
+                ,\n      \"title\": \"MERN eCommerce From Scratch\",\n      \"description\"\
+                : \"Welcome to MERN Stack Front To Back. In this course we will build\
+                \ an in depth full stack social network application using Node.js,\
+                \ Express, React, Redux and MongoDB along with ES6+. We will start\
+                \ with a blank text editor and end with a deployed full stack application.\"\
+                ,\n      \"price\": 70.0,\n      \"subtitle\": \"Build and deploy\
+                \ a social network with Node.js, Express, React, Redux & MongoDB\"\
+                ,\n      \"duration\": 80\n    },\n    {\n      \"tags\": [\n    \
+                \    \"html\",\n        \"css\",\n        \"figma\"\n      ],\n  \
+                \    \"courseId\": 1,\n      \"thumbnailURL\": \"https://img.hoidap247.com/picture/question/20200718/large_1595063159202.jpg\"\
+                ,\n      \"title\": \"UI UX Design\",\n      \"description\": \"Figma\
+                \ is a very powerful application that runs online. There are virtually\
+                \ no platform boundaries when it comes to using figma because you\
+                \ can design within a web browser or using their desktop application\
+                \ made for windows and macs. Figma is similar to Sketch and Adobe\
+                \ XD but is the more powerful of the three when it comes to team collaboration\
+                \ and responsive, fast paced design\",\n      \"price\": 30.99,\n\
+                \      \"subtitle\": \"Use html css to get a job in UI Design\",\n\
+                \      \"duration\": 120\n    },\n    {\n      \"tags\": [\n     \
+                \   \"IELTS\",\n        \"English\"\n      ],\n      \"courseId\"\
+                : 2,\n      \"thumbnailURL\": \"https://netviethuman.com/wp-content/uploads/2021/07/ielts-la-gi-5-e1625750533301.jpg\"\
+                ,\n      \"title\": \"IELTS Band 7+ Complete Prep Course\",\n    \
+                \  \"description\": \"Do you need a Band 7+?  Have you tried repeatedly\
+                \ and not made progress?  Do you need an actual guide to Band 7 success?Then\
+                \ our course is just for you as it prepares participants for all parts\
+                \ of the IELTS exam: Listening, Reading, Writing and Speaking modules.\
+                \ It focuses on teaching the skills and techniques required to sit\
+                \ for the test.  This course has been awarded over 6,000 5-Star Reviews!!!!\
+                \ and the teacher has won UDEMY teacher awards as a top performer.\"\
+                ,\n      \"price\": 30.66,\n      \"subtitle\": \"Major Keys to Success.\"\
+                ,\n      \"duration\": 240\n    },\n    {\n      \"tags\": [\n   \
+                \     \"Cooking\"\n      ],\n      \"courseId\": 3,\n      \"title\"\
+                : \"How to Make Tamales\",\n      \"thumbnailURL\": \"https://cdn.shopify.com/s/files/1/1862/6381/products/tamales_1024x1024.jpg?v=1604530950\"\
+                ,\n      \"description\": \"In this course my mom and I will teach\
+                \ you how to make tamales.  If you have never made tamales before\
+                \ - you probably feel a little intimidated by the long list of ingredients\
+                \ and the overall process. But don't be, because all the ingredients\
+                \ you will need can be found at your local grocery store. We have\
+                \ broken down this course into 9 easy steps, and we will show you\
+                \ what you will need for every section. This recipe will make 5 dozen\
+                \ tamales or 60 to 64 tamales.\",\n      \"price\": 50.55,\n     \
+                \ \"subtitle\": \"In 9 Easy Steps\",\n      \"duration\": 70\n   \
+                \ },\n    {\n      \"tags\": [\n        \"Fitness\"\n      ],\n  \
+                \    \"courseId\": 4,\n      \"title\": \"Fitness Trainer Certification:\
+                \ Gym Workouts & Bodybuilding\",\n      \"thumbnailURL\": \"https://dungcutheduc.vn/images/contents/fitness.jpg\"\
+                ,\n      \"description\": \"Learn How To Become A Gym Workout Trainer\
+                \ / Fitness Coach And Grow Your Fitness Coaching Business.Hi, I'm\
+                \ Felix Harder fitness coach and certified nutritionist. My \\\"Fitness\
+                \ Trainer Certification\\\" is designed for anyone who wants to coach\
+                \ others about gym workouts - be it for bodybuilding, strength training\
+                \ or muscle growth.In this course I will take you through the process\
+                \ of becoming a fitness expert step by step. You will learn everything\
+                \ you need to know about the fundamentals of good training programs\
+                \ and how to design your very own for you or your clients\",\n   \
+                \   \"price\": 50.0,\n      \"subtitle\": \"Become A Fitness Coach:\
+                \ Create Muscle Growth & Strength Workouts, Build A Fitness Training\
+                \ Business & Be A Health Expert\",\n      \"duration\": 360\n    },\n\
+                \    {\n      \"tags\": [\n        \"Calculus\"\n      ],\n      \"\
+                courseId\": 5,\n      \"title\": \"Become a Calculus 1 Master\",\n\
+                \      \"thumbnailURL\": \"https://www.filepicker.io/api/file/Xhi6VIMQ2KJ6IyWyQcCI\"\
+                ,\n      \"description\": \"This 292-lesson course includes video\
+                \ and text explanations of everything from Calculus 1, and it includes\
+                \ 76 quizzes (with solutions!) and an additional 19 workbooks with\
+                \ extra practice problems, to help you test your understanding along\
+                \ the way. Become a Calculus 1 Master is organized into the following\
+                \ sections:Limits & Continuity, Derivatives, Applications of Derivatives\"\
+                ,\n      \"price\": 60.0,\n      \"subtitle\": \"Learn everything\
+                \ from Calculus 1, then test your knowledge with 600+ practice questions\"\
+                ,\n      \"duration\": 120\n    }\n  ]\n}"
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    post:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "username"
+          in: "query"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-request-validator:
+        "Validate query string parameters and\
+        \ headers"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseTemplates:
+              application/json: "{\n    \"res\" : \"Saved course success\"\n}"
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        passthroughBehavior: "when_no_templates"
+        type: "mock"
+  /user-course/detail:
+    get:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "courseId"
+          in: "query"
+          required: true
+          type: "string"
+        - name: "username"
+          in: "query"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-request-validator:
+        "Validate query string parameters and\
+        \ headers"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseTemplates:
+              application/json:
+                "{\n  \"courseId\": 0,\n  \"title\": \"HTML\",\n \
+                \ \"subtitle\": \"Advanced web applications\",\n  \"mainthumbnailURL\"\
+                : \"https://www.youtube.com/watch?v=UB1O30fR-EE\",\n  \"lessons\"\
+                : [\n    {\n      \"indexLesson\": 1,\n      \"representativeVideo\"\
+                : \"https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4\"\
+                ,\n      \"representativeImage\": \"https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/30162210/html-va-css-1-1024x612.jpg\"\
+                ,\n      \"topic\": \"HTML\",\n      \"describe\": \"The <header>\
+                \ element represents a container for introductory content or a set\
+                \ of navigational links.\",\n      \"process\": 10,\n      \"introduction\"\
+                : \"HTML elements are the building blocks of HTML pages. With HTML\
+                \ constructs, images and other objects such as interactive forms may\
+                \ be embedded into the rendered page. HTML provides a means to create\
+                \ structured documents by denoting structural semantics for text such\
+                \ as headings, paragraphs, lists, links, quotes and other items. HTML\
+                \ elements are delineated by tags, written using angle brackets. Tags\
+                \ such as <img /> and <input /> directly introduce content into the\
+                \ page. Other tags such as <p> surround and provide information about\
+                \ document text and may include other tags as sub-elements. Browsers\
+                \ do not display the HTML tags, but use them to interpret the content\
+                \ of the page.\\n HTML can embed programs written in a scripting language\
+                \ such as JavaScript, which affects the behavior and content of web\
+                \ pages. Inclusion of CSS defines the look and layout of content.\
+                \ The World Wide Web Consortium (W3C), former maintainer of the HTML\
+                \ and current maintainer of the CSS standards, has encouraged the\
+                \ use of CSS over explicit presentational HTML since 1997.\",\n  \
+                \    \"questions\": [\n        {\n          \"indexQuestion\": 1,\n\
+                \          \"question\": \"What does HTML stand for\",\n         \
+                \ \"illustration\": \"https://cafedev.vn/wp-content/uploads/2020/05/cafedevn_html.png\"\
+                ,\n          \"answer\": [\n            \"Hyperlinks and Text Markup\
+                \ Language \",\n            \"Hyper Text Markup Language\",\n    \
+                \        \"Home Tool Markup Language\"\n          ],\n          \"\
+                correct_answer\": 1\n        },\n        {\n          \"indexQuestion\"\
+                : 2,\n          \"question\": \"Who is making the Web standards?\"\
+                ,\n          \"illustration\": \"https://cdn.tgdd.vn/Files/2021/05/16/1351991/khai-niem-cua-htlm-va-cac-loai-phan-tu-trong-html-2.jpg\"\
+                ,\n          \"answer\": [\n            \"Mozilla\",\n           \
+                \ \"Microsoft\",\n            \"The World Wide Web Consortium  \"\n\
+                \          ],\n          \"correct_answer\": 2\n        },\n     \
+                \   {\n          \"indexQuestion\": 3,\n          \"question\": \"\
+                Choose the correct HTML element for the largest heading:\",\n    \
+                \      \"illustration\": \"https://freetuts.net/upload/tut_post/images/2015/06/24/420/html-la-gi.jpg\"\
+                ,\n          \"answer\": [\n            \"<h6>\",\n            \"\
+                <h1>\",\n            \"<heading>\"\n          ],\n          \"correct_answer\"\
+                : 1\n        },\n        {\n          \"indexQuestion\": 4,\n    \
+                \      \"question\": \"What is the correct HTML element for inserting\
+                \ a line break?\",\n          \"illustration\": \"https://cdn.tgdd.vn/Files/2021/05/16/1351991/khai-niem-cua-htlm-va-cac-loai-phan-tu-trong-html-489x367.jpg\"\
+                ,\n          \"answer\": [\n            \"<br>\",\n            \"\
+                <break>\",\n            \"<lb>\"\n          ],\n          \"correct_answer\"\
+                : 0\n        },\n        {\n          \"indexQuestion\": 5,\n    \
+                \      \"question\": \"What is the correct HTML for adding a background\
+                \ color?\",\n          \"illustration\": \"https://resources.stdio.vn/content/article/html-phan-0-trang-web-dau-tien/thumbnail-hd/blob-1598602145526@960x540.jpg\"\
+                ,\n          \"answer\": [\n            \"<background>yellow</background>\"\
+                ,\n            \"<body bg=\\\"yellow\\\">\",\n            \"<body\
+                \ style=\\\"background-color:yellow;\\\">\"\n          ],\n      \
+                \    \"correct_answer\": 2\n        }\n      ]\n    },\n    {\n  \
+                \    \"indexLesson\": 2,\n      \"representativeVideo\": \"https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4\"\
+                ,\n      \"representativeImage\": \"https://codelearn.io/Upload/Blog/asyncawait-trong-javascript-63741267332.9522.jpg\"\
+                ,\n      \"topic\": \"Javascript\",\n      \"describe\": \"JavaScript\
+                \ (/ˈdʒɑːvəˌskrɪpt/),[9] often abbreviated as JS, is a programming\
+                \ language that conforms to the ECMAScript specification.[10] JavaScript\
+                \ is high-level, often just-in-time compiled, and multi-paradigm.\
+                \ It has curly-bracket syntax, dynamic typing, prototype-based object-orientation,\
+                \ and first-class functions.\",\n      \"process\": 50,\n      \"\
+                introduction\": \"Alongside HTML and CSS, JavaScript is one of the\
+                \ core technologies of the World Wide Web.Over 97% of websites use\
+                \ it client-side for web page behavior,often incorporating third-party\
+                \ libraries.Most web browsers have a dedicated JavaScript engine to\
+                \ execute the code on the user's device.\\nAs a multi-paradigm language,\
+                \ JavaScript supports event-driven, functional, and imperative programming\
+                \ styles. It has application programming interfaces (APIs) for working\
+                \ with text, dates, regular expressions, standard data structures,\
+                \ and the Document Object Model (DOM).The ECMAScript standard does\
+                \ not include any input/output (I/O), such as networking, storage,\
+                \ or graphics facilities. In practice, the web browser or other runtime\
+                \ system provides JavaScript APIs for I/O.\\nJavaScript engines were\
+                \ originally used only in web browsers, but they are now core components\
+                \ of other software systems, most notably servers and a variety of\
+                \ applications.\\nAlthough there are similarities between JavaScript\
+                \ and Java, including language name, syntax, and respective standard\
+                \ libraries, the two languages are distinct and differ greatly in\
+                \ design.\",\n      \"questions\": [\n        {\n          \"indexQuestion\"\
+                : 1,\n          \"question\": \"Is JavaScript a case-sensitive language?\"\
+                ,\n          \"illustration\": \"https://nordiccoder.com/app/uploads/2019/12/50-javascript.jpg\"\
+                ,\n          \"answer\": [\n            \"true\",\n            \"\
+                false\",\n            \"I dont know\"\n          ],\n          \"\
+                correct_answer\": 0\n        },\n        {\n          \"indexQuestion\"\
+                : 2,\n          \"question\": \"Which of the following is true about\
+                \ cookie handling in JavaScript?\",\n          \"illustration\": \"\
+                https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfvR7Tkr5HQBgjuVkGotsd-66VwM4dOXCreB9Wb6UNPnbQEtFjeRalPov7-OvZNsogFX0&usqp=CAU\"\
+                ,\n          \"answer\": [\n            \"manipulate cookies using\
+                \ the cookie\",\n            \"read, create, modify, and delete\"\
+                ,\n            \"Both of the above.\"\n          ],\n          \"\
+                correct_answer\": 2\n        },\n        {\n          \"indexQuestion\"\
+                : 3,\n          \"question\": \"Which built-in method returns the\
+                \ index within the calling String object of the first occurrence of\
+                \ the specified value?\",\n          \"illustration\": \"https://monamedia.co/wp-content/uploads/2020/02/javascript-1.jpg\"\
+                ,\n          \"answer\": [\n            \"getIndex()\",\n        \
+                \    \"location()\",\n            \"indexOf()\"\n          ],\n  \
+                \        \"correct_answer\": 2\n        },\n        {\n          \"\
+                indexQuestion\": 4,\n          \"question\": \"Which of the following\
+                \ function of Number object formats a number with a specific number\
+                \ of digits to the right of the decimal?\",\n          \"illustration\"\
+                : \"https://cybersoft.edu.vn/wp-content/uploads/2021/02/Javascript-ES6.jpg\"\
+                ,\n          \"answer\": [\n            \"toExponential()\",\n   \
+                \         \"toFixed()\",\n            \"toPrecision()\"\n        \
+                \  ],\n          \"correct_answer\": 1\n        },\n        {\n  \
+                \        \"indexQuestion\": 5,\n          \"question\": \"Which of\
+                \ the following function of Number object defines how many total digits\
+                \ to display of a number?\",\n          \"illustration\": \"https://thejsdoor.com/wp-content/uploads/2020/05/js.jpg\"\
+                ,\n          \"answer\": [\n            \"toPrecision()\",\n     \
+                \       \"toExponential()\",\n            \"toFixed()\"\n        \
+                \  ],\n          \"correct_answer\": 0\n        }\n      ]\n    },\n\
+                \    {\n      \"indexLesson\": 3,\n      \"representativeVideo\":\
+                \ \"https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4\"\
+                ,\n      \"representativeImage\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRogQqp804M5u-AnN0i1kOkjiT_TFbNsXs9Uw&usqp=CAU\"\
+                ,\n      \"topic\": \"jQuery\",\n      \"describe\": \"jQuery is a\
+                \ JavaScript library designed to simplify HTML DOM tree traversal\
+                \ and manipulation, as well as event handling, CSS animation, and\
+                \ Ajax.It is free, open-source software using the permissive MIT License.As\
+                \ of May 2019, jQuery is used by 73% of the 10 million most popular\
+                \ websites.Web analysis indicates that it is the most widely deployed\
+                \ JavaScript library by a large margin, having at least 3 to 4 times\
+                \ more usage than any other JavaScript library\",\n      \"process\"\
+                : 70,\n      \"introduction\": \"jQuery's syntax is designed to make\
+                \ it easier to navigate a document, select DOM elements, create animations,\
+                \ handle events, and develop Ajax applications. jQuery also provides\
+                \ capabilities for developers to create plug-ins on top of the JavaScript\
+                \ library. This enables developers to create abstractions for low-level\
+                \ interaction and animation, advanced effects and high-level, themeable\
+                \ widgets. The modular approach to the jQuery library allows the creation\
+                \ of powerful dynamic web pages and Web applications.\\nThe set of\
+                \ jQuery core features—DOM element selections, traversal and manipulation—\
+                enabled by its selector engine (named \\\"Sizzle\\\" from v1.3), created\
+                \ a new \\\"programming style\\\", fusing algorithms and DOM data\
+                \ structures. This style influenced the architecture of other JavaScript\
+                \ frameworks like YUI v3 and Dojo, later stimulating the creation\
+                \ of the standard Selectors API. Later, this style has been enhanced\
+                \ with a deeper algorithm-data fusion in an heir of jQuery, the D3.js\
+                \ framework.\\nMicrosoft and Nokia bundle jQuery on their platforms.Microsoft\
+                \ includes it with Visual Studio[9] for use within Microsoft's ASP.NET\
+                \ AJAX and ASP.NET MVC frameworks while Nokia has integrated it into\
+                \ the Web Run-Time widget development platform\",\n      \"questions\"\
+                : [\n        {\n          \"indexQuestion\": 1,\n          \"question\"\
+                : \"How can you get the type of arguments passed to a function?\"\
+                ,\n          \"illustration\": \"https://www.vnfree.net/Uploaded/Images/2019/05/06/06052019_02_traversing-jquery.png\"\
+                ,\n          \"answer\": [\n            \"using typeof operator\"\
+                ,\n            \"using getType function\",\n            \"Both of\
+                \ the above.\"\n          ],\n          \"correct_answer\": 0\n  \
+                \      },\n        {\n          \"indexQuestion\": 2,\n          \"\
+                question\": \"Which built-in method returns the character at the specified\
+                \ index?\",\n          \"illustration\": \"https://miro.medium.com/max/2000/1*xJLMHLQWn30snFs-r8SOIA.jpeg\"\
+                ,\n          \"answer\": [\n            \"characterAt()\",\n     \
+                \       \"getCharAt()\",\n            \"charAt()\"\n          ],\n\
+                \          \"correct_answer\": 2\n        },\n        {\n        \
+                \  \"indexQuestion\": 3,\n          \"question\": \"Tags for Headers\"\
+                ,\n          \"illustration\": \"https://bizflyportal.mediacdn.vn/thumb_wm/1000,100/bizflyportal/images/jqu16135755004639.png\"\
+                ,\n          \"answer\": [\n            \"answer A\",\n          \
+                \  \"answer B\",\n            \"answer C\"\n          ],\n       \
+                \   \"correct_answer\": 1\n        },\n        {\n          \"indexQuestion\"\
+                : 4,\n          \"question\": \"Which of the following jQuery selector\
+                \ select elements whose css class is some-class?\",\n          \"\
+                illustration\": \"https://www.tutorialrepublic.com/lib/images/jquery-illustration.png\"\
+                ,\n          \"answer\": [\n            \"$('some-class')\",\n   \
+                \         \"$('.some-class')\",\n            \"$('#some-class')\"\n\
+                \          ],\n          \"correct_answer\": 1\n        },\n     \
+                \   {\n          \"indexQuestion\": 5,\n          \"question\": \"\
+                Which of the following jQuery method apply a style on an element?\"\
+                ,\n          \"illustration\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSyRC1v_QEYN8B3vRTgKFwdMZT9K5eaSmamQ&usqp=CAU\"\
+                ,\n          \"answer\": [\n            \"addStyle(classes)\",\n \
+                \           \"addClass(classes)\",\n            \"addCSSClass(classes)\"\
+                \n          ],\n          \"correct_answer\": 1\n        }\n     \
+                \ ]\n    },\n    {\n      \"indexLesson\": 4,\n      \"representativeVideo\"\
+                : \"https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4\"\
+                ,\n      \"representativeImage\": \"https://getbootstrap.com/docs/5.1/assets/brand/bootstrap-social.png\"\
+                ,\n      \"topic\": \"Bootstrap\",\n      \"describe\": \"Bootstrapping\
+                \ can also refer to the development of successively more complex,\
+                \ faster programming environments. The simplest environment will be,\
+                \ perhaps, a very basic text editor (e.g., ed) and an assembler program.\
+                \ Using these tools, one can write a more complex text editor, and\
+                \ a simple compiler for a higher-level language and so on, until one\
+                \ can have a graphical IDE and an extremely high-level programming\
+                \ language.\",\n      \"process\": 0,\n      \"introduction\": \"\
+                Historically, bootstrapping also refers to an early technique for\
+                \ computer program development on new hardware. The technique described\
+                \ in this paragraph has been replaced by the use of a cross compiler\
+                \ executed by a pre-existing computer. Bootstrapping in program development\
+                \ began during the 1950s when each program was constructed on paper\
+                \ in decimal code or in binary code, bit by bit (1s and 0s), because\
+                \ there was no high-level computer language, no compiler, no assembler,\
+                \ and no linker. A tiny assembler program was hand-coded for a new\
+                \ computer (for example the IBM 650) which converted a few instructions\
+                \ into binary or decimal code: A1. This simple assembler program was\
+                \ then rewritten in its just-defined assembly language but with extensions\
+                \ that would enable the use of some additional mnemonics for more\
+                \ complex operation codes. The enhanced assembler's source program\
+                \ was then assembled by its predecessor's executable (A1) into binary\
+                \ or decimal code to give A2, and the cycle repeated (now with those\
+                \ enhancements available), until the entire instruction set was coded,\
+                \ branch addresses were automatically calculated, and other conveniences\
+                \ (such as conditional assembly, macros, optimisations, etc.) established.\
+                \ This was how the early assembly program SOAP (Symbolic Optimal Assembly\
+                \ Program) was developed. Compilers, linkers, loaders, and utilities\
+                \ were then coded in assembly language, further continuing the bootstrapping\
+                \ process of developing complex software systems by using simpler\
+                \ software.\",\n      \"questions\": [\n        {\n          \"indexQuestion\"\
+                : 1,\n          \"question\": \"Which of the following class indicates\
+                \ a warning that might need attention?\",\n          \"illustration\"\
+                : \"https://dizibrand-19a1e.kxcdn.com/wp-content/uploads/2021/03/Bootstrap-dizibrand-8.png\"\
+                ,\n          \"answer\": [\n            \".active\",\n           \
+                \ \".success\",\n            \".warning\"\n          ],\n        \
+                \  \"correct_answer\": 2\n        },\n        {\n          \"indexQuestion\"\
+                : 2,\n          \"question\": \"Which of the following class is required\
+                \ to be added to form tag to make it horizontal?\",\n          \"\
+                illustration\": \"https://cdn-media-2.freecodecamp.org/w1280/5f9c9a9e740569d1a4ca26b6.jpg\"\
+                ,\n          \"answer\": [\n            \".horizontal\",\n       \
+                \     \".form-horizontal\",\n            \".horizontal\"\n       \
+                \   ],\n          \"correct_answer\": 1\n        },\n        {\n \
+                \         \"indexQuestion\": 3,\n          \"question\": \"Which of\
+                \ the following bootstrap style of button makes the button size small?\"\
+                ,\n          \"illustration\": \"https://mona.media/wp-content/uploads/2021/06/what-is-bootstrap.png\"\
+                ,\n          \"answer\": [\n            \".btn-lg\",\n           \
+                \ \".btn-sm\",\n            \".btn-xs\"\n          ],\n          \"\
+                correct_answer\": 1\n        },\n        {\n          \"indexQuestion\"\
+                : 4,\n          \"question\": \"Which of the following bootstrap style\
+                \ can be used to customize .pagination links?\",\n          \"illustration\"\
+                : \"https://i.ytimg.com/vi/I7CfaDYzTVM/maxresdefault.jpg\",\n    \
+                \      \"answer\": [\n            \".disabled, .active\",\n      \
+                \      \".menu-active, .menu-disabled\",\n            \"None of the\
+                \ above.\"\n          ],\n          \"correct_answer\": 0\n      \
+                \  },\n        {\n          \"indexQuestion\": 5,\n          \"question\"\
+                : \"Using which of the following ways you can add header to a panel?\"\
+                ,\n          \"illustration\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8KHWzJqXd89kS-tqOtFitugKl6jgBL0dtQtIqpNtvo-xEOuwC3IJINbCOB4dJ2hp2jQo&usqp=CAU\"\
+                ,\n          \"answer\": [\n            \"Use .panel-heading class\"\
+                ,\n            \"Use any <h1>-<h6> with a .panel-title\",\n      \
+                \      \"Both of the above.\"\n          ],\n          \"correct_answer\"\
+                : 2\n        }\n      ]\n    },\n    {\n      \"indexLesson\": 5,\n\
+                \      \"representativeVideo\": \"https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4\"\
+                ,\n      \"representativeImage\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7H1dWtRX029yNg417RJaAc_XLBBMFQRTtg&usqp=CAU\"\
+                ,\n      \"topic\": \"CSS\",\n      \"describe\": \"Cascading Style\
+                \ Sheets (CSS) is a style sheet language used for describing the presentation\
+                \ of a document written in a markup language such as HTML.CSS is a\
+                \ cornerstone technology of the World Wide Web, alongside HTML and\
+                \ JavaScript\",\n      \"process\": 90,\n      \"introduction\": \"\
+                CSS is designed to enable the separation of presentation and content,\
+                \ including layout, colors, and fonts.This separation can improve\
+                \ content accessibility, provide more flexibility and control in the\
+                \ specification of presentation characteristics, enable multiple web\
+                \ pages to share formatting by specifying the relevant CSS in a separate\
+                \ .css file which reduces complexity and repetition in the structural\
+                \ content as well as enabling the .css file to be cached to improve\
+                \ the page load speed between the pages that share the file and its\
+                \ formatting.\\nSeparation of formatting and content also makes it\
+                \ feasible to present the same markup page in different styles for\
+                \ different rendering methods, such as on-screen, in print, by voice\
+                \ (via speech-based browser or screen reader), and on Braille-based\
+                \ tactile devices. CSS also has rules for alternate formatting if\
+                \ the content is accessed on a mobile device.\\nThe name cascading\
+                \ comes from the specified priority scheme to determine which style\
+                \ rule applies if more than one rule matches a particular element.\
+                \ This cascading priority scheme is predictable.\\nThe CSS specifications\
+                \ are maintained by the World Wide Web Consortium (W3C). Internet\
+                \ media type (MIME type) text/css is registered for use with CSS by\
+                \ RFC 2318 (March 1998). The W3C operates a free CSS validation service\
+                \ for CSS documents.\",\n      \"questions\": [\n        {\n     \
+                \     \"indexQuestion\": 1,\n          \"question\": \"Which of the\
+                \ following selector matches all elements of a type?\",\n        \
+                \  \"illustration\": \"https://evondev.com/wp-content/uploads/2020/04/css-tips-tricks.jpg\"\
+                ,\n          \"answer\": [\n            \"The Type Selector\",\n \
+                \           \"The Universal Selector\",\n            \"The Descendant\
+                \ Selector\"\n          ],\n          \"correct_answer\": 0\n    \
+                \    },\n        {\n          \"indexQuestion\": 2,\n          \"\
+                question\": \"Which of the following defines a measurement relative\
+                \ to a font's x-height?\",\n          \"illustration\": \"https://www.dammio.com/wp-content/uploads/2019/08/CSS3.png\"\
+                ,\n          \"answer\": [\n            \"%\",\n            \"cm\"\
+                ,\n            \"ex\"\n          ],\n          \"correct_answer\"\
+                : 2\n        },\n        {\n          \"indexQuestion\": 3,\n    \
+                \      \"question\": \"Which of the following property is used to\
+                \ set the background image of an element?\",\n          \"illustration\"\
+                : \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdvv-5ELXjKF4-pIRz51d0L-Y6fQZPUSNESmolEo6cbttatPS5k4r_k9vrwPk5Us86jrE&usqp=CAU\"\
+                ,\n          \"answer\": [\n            \"background-color\",\n  \
+                \          \"background-image\",\n            \"background-position\"\
+                \n          ],\n          \"correct_answer\": 1\n        },\n    \
+                \    {\n          \"indexQuestion\": 4,\n          \"question\": \"\
+                Which of the following property is used to underline, overline, and\
+                \ strikethrough text\",\n          \"illustration\": \"https://giuseart.com/wp-content/uploads/2018/07/417645-636618158800124958-16x9.jpg\"\
+                ,\n          \"answer\": [\n            \"text-indent\",\n       \
+                \     \"text-decoration\",\n            \"text-align\"\n         \
+                \ ],\n          \"correct_answer\": 1\n        },\n        {\n   \
+                \       \"indexQuestion\": 5,\n          \"question\": \"Which of\
+                \ the following property is used to set the opacity of an image?\"\
+                ,\n          \"illustration\": \"https://webbynat.files.wordpress.com/2016/03/css.png\"\
+                ,\n          \"answer\": [\n            \"border\",\n            \"\
+                height\",\n            \"-moz-opacity\"\n          ],\n          \"\
+                correct_answer\": 2\n        }\n      ]\n    }\n  ]\n}"
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    put:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "courseId"
+          in: "query"
+          required: true
+          type: "string"
+        - name: "username"
+          in: "query"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-request-validator:
+        "Validate query string parameters and\
+        \ headers"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseTemplates:
+              application/json: "{\n    \"res\" : \"edit process success\"\n}"
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+securityDefinitions:
+  api_key:
+    type: "apiKey"
+    name: "x-api-key"
+    in: "header"
+definitions:
+  Empty:
+    type: "object"
+    title: "Empty Schema"
+x-amazon-apigateway-request-validators:
+  Validate query string parameters and headers:
+    validateRequestParameters: true
+    validateRequestBody: false

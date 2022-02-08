@@ -1,0 +1,218 @@
+---
+swagger: "2.0"
+info:
+  version: "0.1.0"
+  title: "course-app-api"
+schemes:
+  - "https"
+paths:
+  /course:
+    get:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-integration:
+        uri: ${course_get_lambda_arn}
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        type: "aws_proxy"
+    options:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "courseName"
+          in: "query"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-request-validator:
+        "Validate query string parameters and\
+        \ headers"
+      x-amazon-apigateway-integration:
+        uri: ${course_option_lambda_arn}
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        type: "aws_proxy"
+  /course/detail:
+    get:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "courseId"
+          in: "query"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-request-validator:
+        "Validate query string parameters and\
+        \ headers"
+      x-amazon-apigateway-integration:
+        uri: ${course_detail_get_lambda_arn}
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        type: "aws_proxy"
+  /course/list-title:
+    get:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-integration:
+        uri: ${course_list_title_get_lambda_arn}
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        type: "aws_proxy"
+  /user-course:
+    get:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "username"
+          in: "query"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-request-validator:
+        "Validate query string parameters and\
+        \ headers"
+      x-amazon-apigateway-integration:
+        uri: ${user_course_get_lambda_arn}
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        type: "aws_proxy"
+    post:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "username"
+          in: "query"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-request-validator:
+        "Validate query string parameters and\
+        \ headers"
+      x-amazon-apigateway-integration:
+        uri: ${user_course_post_lambda_arn}
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        type: "aws_proxy"
+  /user-course/detail:
+    get:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "courseId"
+          in: "query"
+          required: true
+          type: "string"
+        - name: "username"
+          in: "query"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-request-validator:
+        "Validate query string parameters and\
+        \ headers"
+      x-amazon-apigateway-integration:
+        uri: ${user_course_detail_get_lambda_arn}
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        type: "aws_proxy"
+    put:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "courseId"
+          in: "query"
+          required: true
+          type: "string"
+        - name: "username"
+          in: "query"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+        - api_key: []
+      x-amazon-apigateway-request-validator:
+        "Validate query string parameters and\
+        \ headers"
+      x-amazon-apigateway-integration:
+        uri: ${user_course_detail_put_lambda_arn}
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        type: "aws_proxy"
+securityDefinitions:
+  api_key:
+    type: "apiKey"
+    name: "x-api-key"
+    in: "header"
+definitions:
+  Empty:
+    type: "object"
+    title: "Empty Schema"
+x-amazon-apigateway-request-validators:
+  Validate query string parameters and headers:
+    validateRequestParameters: true
+    validateRequestBody: false
