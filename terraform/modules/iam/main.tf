@@ -1,32 +1,39 @@
 
-data "aws_iam_policy_document" "policy" {
-  statement {
-    sid    = ""
-    effect = "Allow"
+# IF ROOT ACCOUNT PROVIDED UN COMMENT BELLOW to create
+# iam role for lambda-dynamodb execution 
 
-    principals {
-      identifiers = ["lambda.amazonaws.com", "apigateway.amazonaws.com"]
-      type        = "Service"
-    }
+# data "aws_iam_policy_document" "policy" {
+#   statement {
+#     sid    = ""
+#     effect = "Allow"
 
-    actions = ["sts:AssumeRole"]
-  }
-}
-resource "aws_iam_role_policy_attachment" "iam_for_lambda-role-policy-attachment" {
-  for_each = toset([
-    "arn:aws:iam::aws:policy/AWSLambdaInvocation-DynamoDB",
-    "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess",
-  ])
+#     principals {
+#       identifiers = ["lambda.amazonaws.com", "apigateway.amazonaws.com"]
+#       type        = "Service"
+#     }
 
-  role       = aws_iam_role.iam_for_lambda.name
-  policy_arn = each.value
-}
+#     actions = ["sts:AssumeRole"]
+#   }
+# }
+# resource "aws_iam_role_policy_attachment" "iam_for_lambda-role-policy-attachment" {
+#   for_each = toset([
+#     "arn:aws:iam::aws:policy/AWSLambdaInvocation-DynamoDB",
+#     "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess",
 
-resource "aws_iam_role" "iam_for_lambda" {
-  name               = "iam_for_lambda"
-  assume_role_policy = data.aws_iam_policy_document.policy.json
+#   ])
+#   role       = aws_iam_role.iam_for_lambda.name
+#   policy_arn = each.value
+# }
+
+# resource "aws_iam_role" "iam_for_lambda" {
+#   name               = "iam_for_lambda"
+#   assume_role_policy = data.aws_iam_policy_document.policy.json
+# }
+
+data "aws_iam_role" "root_created_lambda_role" {
+  name = "lamda_functions"
 }
 
 output "iam_for_lambda" {
-  value = aws_iam_role.iam_for_lambda.arn
+  value = data.aws_iam_role.root_created_lambda_role.arn
 }
