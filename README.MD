@@ -7,6 +7,13 @@
 2. Install Terraform SDK CLI
 
 *Note contact mentor for AWS account role
+```bash
+aws configure
+terraform apply
+
+*If terminal output has "permission denied due to role"
+re-check account permission/role to provision resource in AWS
+```
 
 #### Terraform Folder & Directory
 ```yml
